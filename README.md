@@ -1,5 +1,9 @@
 # Nodex-Android
 
+> **Development on this project has ceased. The repository is archived for reference only. No further updates, bug fixes, or pull requests will be accepted.**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 Nodex-Android is an open-source Android client for direct SSH monitoring of Linux servers. It covers live metrics, services, alerts, history, and Docker or Podman status. No billing. No telemetry. No account lock-in.
 
 ## Canonical docs
@@ -39,3 +43,9 @@ source ../build-env.sh
 - The app sends no telemetry.
 - Credentials stay on-device. Keep signing files, `.env` files, API keys, and machine-local config out of the repo.
 - The repo is meant to stay public. Do not add closed-source dependencies, endpoints, or docs.
+
+## License
+
+Nodex-Android is open source under the [MIT License](./LICENSE).
+See [NOTICE](./NOTICE) for third-party license acknowledgments.
+Contributions are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
