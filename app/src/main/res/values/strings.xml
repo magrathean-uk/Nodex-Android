@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Nodex</string>
+
+    <!-- Navigation -->
+    <string name="nav_overview">Overview</string>
+    <string name="nav_network">Network</string>
+    <string name="nav_services">Services</string>
+    <string name="nav_alerts">Alerts</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Common -->
+    <string name="add_server">Add Server</string>
+    <string name="no_servers_title">No Servers Added</string>
+    <string name="no_servers_subtitle">Add a server to start monitoring</string>
+    <string name="connecting">Connecting…</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="error">Error</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="refresh">Refresh</string>
+
+    <!-- Overview -->
+    <string name="cpu">CPU</string>
+    <string name="memory">Memory</string>
+    <string name="disk">Disk</string>
+    <string name="swap">Swap</string>
+    <string name="uptime">Uptime</string>
+    <string name="load_average">Load Average</string>
+    <string name="top_processes">Top Processes</string>
+    <string name="hardware_info">Hardware</string>
+    <string name="active_sessions">Active Sessions</string>
+    <string name="enhanced_tools">Enhanced Tools</string>
+    <string name="syncing">Syncing server data…</string>
+
+    <!-- Network -->
+    <string name="public_ip">Public IP</string>
+    <string name="interfaces">Interfaces</string>
+    <string name="interface_details">Interface Details</string>
+
+    <!-- Services -->
+    <string name="all_services">All</string>
+    <string name="running_services">Running</string>
+    <string name="failed_services">Failed</string>
+    <string name="search_services">Search services</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="action_history">Action History</string>
+    <string name="sudo_required">Sudo Password Required</string>
+    <string name="sudo_explanation">This action requires elevated privileges. Enter the sudo password for this server.</string>
+
+    <!-- Alerts -->
+    <string name="search_alerts">Search alerts</string>
+    <string name="no_active_alerts">No active alerts</string>
+    <string name="everything_healthy">Everything looks healthy right now.</string>
+    <string name="enhanced_journal">Enhanced Journal Access</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+    <string name="servers">Servers</string>
+    <string name="server_config">Server Configuration</string>
+    <string name="poll_interval">Poll Interval</string>
+    <string name="alert_lookback">Alert Lookback</string>
+    <string name="sudo_password">Sudo Password</string>
+    <string name="demo_mode">Demo Mode</string>
+    <string name="exit_demo">Exit Demo Mode</string>
+    <string name="data_section">Data</string>
+    <string name="metrics_history">Metrics History &amp; Charts</string>
+    <string name="reset_app">Reset App</string>
+    <string name="about">About</string>
+    <string name="power_actions">Power Actions</string>
+
+    <!-- History -->
+    <string name="history_title">Metrics History</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="clear_history">Clear History</string>
+
+    <!-- Add Server -->
+    <string name="server_name">Server Name</string>
+    <string name="hostname">Hostname</string>
+    <string name="port">Port</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="auth_type">Authentication</string>
+    <string name="test_connection">Test Connection</string>
+</resources>

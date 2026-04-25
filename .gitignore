@@ -1,0 +1,19 @@
+# Gradle
+.gradle/
+**/build/
+
+# Android Studio
+*.iml
+.idea/
+
+# Local configuration
+local.properties
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+
+# OS files
+.DS_Store
+nohup.out

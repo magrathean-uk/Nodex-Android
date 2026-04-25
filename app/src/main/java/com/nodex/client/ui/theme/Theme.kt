@@ -1,0 +1,73 @@
+package com.nodex.client.ui.theme
+
+import android.app.Activity
+import android.os.Build
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
+
+private val DarkColorScheme = darkColorScheme(
+    primary = NodexAccentBlue,
+    onPrimary = androidx.compose.ui.graphics.Color.White,
+    primaryContainer = NodexBrandBlue.copy(alpha = 0.28f),
+    onPrimaryContainer = androidx.compose.ui.graphics.Color.White,
+    secondary = NodexAccentPurple,
+    tertiary = StatusGreen,
+    background = NodexBrandDarkStart,
+    surface = androidx.compose.ui.graphics.Color(0xFF101827),
+    surfaceContainerLow = androidx.compose.ui.graphics.Color(0xFF162033),
+    surfaceContainerHighest = androidx.compose.ui.graphics.Color(0xFF253044),
+    error = StatusRed
+)
+
+private val LightColorScheme = lightColorScheme(
+    primary = NodexBrandBlue,
+    onPrimary = androidx.compose.ui.graphics.Color.White,
+    primaryContainer = androidx.compose.ui.graphics.Color(0xFFDDE6FF),
+    onPrimaryContainer = androidx.compose.ui.graphics.Color(0xFF061747),
+    secondary = NodexBlue,
+    tertiary = StatusGreen,
+    background = androidx.compose.ui.graphics.Color(0xFFF8FAFF),
+    surface = androidx.compose.ui.graphics.Color.White,
+    surfaceContainerLow = androidx.compose.ui.graphics.Color(0xFFF1F5FF),
+    surfaceContainerHighest = androidx.compose.ui.graphics.Color(0xFFE3EAF8),
+    error = StatusRed
+)
+
+@Composable
+fun NodexTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    // Dynamic color is available on Android 12+
+    dynamicColor: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    val colorScheme = when {
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            val context = LocalContext.current
+            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        }
+        darkTheme -> DarkColorScheme
+        else -> LightColorScheme
+    }
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as Activity).window
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+        }
+    }
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = Typography,
+        content = content
+    )
+}
